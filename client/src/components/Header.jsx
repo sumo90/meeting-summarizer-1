@@ -11,12 +11,12 @@ function Header() {
       </div>
 
       <h1 className="max-w-xl text-4xl font-semibold leading-[1.1] tracking-tight text-[#111318] md:text-5xl">
-        Turn your call into a{" "}
+        Turn your Meetings into a{" "}
         <span className="text-[#5B5BF0]">clear record</span>.
       </h1>
 
       <p className="max-w-md text-[15px] leading-relaxed text-[#70737C]">
-        Upload a recording and get a transcript, summary, and action items in
+        Upload a meeting recording and get a transcript, summary, and action items in
         minutes.
       </p>
     </header>
