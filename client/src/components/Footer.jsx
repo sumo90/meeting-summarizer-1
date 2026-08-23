@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="mt-10 flex flex-col items-center gap-2 text-center text-sm text-[#5B8DEF]">
-      © Satish Dewasi
+    <footer className="mt-16 border-t border-[#E7E7E7] pt-6 text-sm text-[#B3B3B3]">
+      Built by Sharan Sansanwal
     </footer>
   );
 }
