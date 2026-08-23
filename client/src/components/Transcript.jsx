@@ -6,11 +6,11 @@ function Transcript({ loading, processingStatus, result }) {
       {loading ? (
         <LoadingState processingStatus={processingStatus} />
       ) : result ? (
-        <p className="whitespace-pre-wrap text-[#c4c4cf]">
+        <p className="whitespace-pre-wrap text-[15px] leading-relaxed text-[#111318]">
           {result.transcript}
         </p>
       ) : (
-        <p className="text-[#5c5c68]">Transcript will appear here...</p>
+        <p className="text-sm text-[#B3B3B3]">Transcript will appear here...</p>
       )}
     </div>
   );
