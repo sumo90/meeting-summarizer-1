@@ -35,9 +35,7 @@ function App() {
       const formData = new FormData();
       formData.append("audio", selectedFile);
 
-      const API_URL = import.meta.env.VITE_API_URL;
-
-      const response = await fetch(`${API_URL}/api/meetings`, {
+      const response = await fetch("http://localhost:5000/api/meetings", {
         method: "POST",
         body: formData,
       });
@@ -58,33 +56,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07070b] px-4 py-6">
-      <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] max-w-310 flex-col overflow-hidden rounded-2xl border border-[#1e3a5f] bg-gradient-to-b from-[#0d0d15] to-[#09090e] px-6 py-10 shadow-[0_0_80px_rgba(59,130,246,0.08)] md:px-12">
-        <svg
-          viewBox="0 0 100 100"
-          className="pointer-events-none absolute bottom-0 left-0 h-32 w-32 opacity-20"
-          fill="none"
-        >
-          <path
-            d="M0 80 Q30 90 40 60 T80 50"
-            stroke="#3B82F6"
-            strokeWidth="1"
-          />
-          <path d="M0 60 Q20 75 35 50" stroke="#3B82F6" strokeWidth="0.7" />
-        </svg>
-        <svg
-          viewBox="0 0 100 100"
-          className="pointer-events-none absolute bottom-0 right-0 h-32 w-32 -scale-x-100 opacity-20"
-          fill="none"
-        >
-          <path
-            d="M0 80 Q30 90 40 60 T80 50"
-            stroke="#3B82F6"
-            strokeWidth="1"
-          />
-          <path d="M0 60 Q20 75 35 50" stroke="#3B82F6" strokeWidth="0.7" />
-        </svg>
-
+    <div className="min-h-screen bg-[#FAFAF9]">
+      <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-6 py-16 md:px-0">
         <Header />
 
         <UploadSection
