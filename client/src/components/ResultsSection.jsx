@@ -11,14 +11,14 @@ function ResultsSection({
   result,
 }) {
   return (
-    <section className="mt-10 flex-1 overflow-hidden rounded-xl border border-[#16233a] bg-[#0b0b12]">
+    <section className="mt-10 flex-1">
       <Tabs
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         loading={loading}
       />
 
-      <div className="relative min-h-87.5 p-6 md:p-8">
+      <div className="min-h-87.5 py-8">
         {activeTab === "transcript" && (
           <Transcript
             loading={loading}
