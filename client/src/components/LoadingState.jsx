@@ -1,31 +1,32 @@
+import Waveform from "./Waveform";
+
 function LoadingState({ processingStatus }) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3B82F6]/10">
-          <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#3B82F6] border-t-transparent" />
-        </div>
+        <Waveform bars={5} animate className="h-5" />
 
         <div>
-          <p className="font-medium text-[#3B82F6]">{processingStatus}</p>
-
-          <p className="mt-1 text-sm text-[#6b6b78]">
-            This may take a few seconds...
+          <p className="text-sm font-medium text-[#111318]">
+            {processingStatus}
+          </p>
+          <p className="mt-0.5 text-sm text-[#70737C]">
+            This may take a few moments...
           </p>
         </div>
       </div>
 
-      <div className="animate-pulse space-y-4">
-        <div className="h-4 w-3/4 rounded bg-gradient-to-r from-[#17171f] via-[#1e2a4a] to-[#17171f]" />
-        <div className="h-4 w-full rounded bg-[#17171f]" />
-        <div className="h-4 w-5/6 rounded bg-[#17171f]" />
+      <div className="animate-pulse space-y-3">
+        <div className="h-3 w-3/4 rounded bg-[#F1F1F0]" />
+        <div className="h-3 w-full rounded bg-[#F1F1F0]" />
+        <div className="h-3 w-5/6 rounded bg-[#F1F1F0]" />
 
-        <div className="h-4 w-2/3 rounded bg-[#17171f]" />
-        <div className="h-4 w-full rounded bg-gradient-to-r from-[#17171f] via-[#1e2a4a] to-[#17171f]" />
-        <div className="h-4 w-4/5 rounded bg-[#17171f]" />
+        <div className="h-3 w-2/3 rounded bg-[#F1F1F0]" />
+        <div className="h-3 w-full rounded bg-[#F1F1F0]" />
+        <div className="h-3 w-4/5 rounded bg-[#F1F1F0]" />
 
-        <div className="h-4 w-3/4 rounded bg-[#17171f]" />
-        <div className="h-4 w-5/6 rounded bg-[#17171f]" />
+        <div className="h-3 w-3/4 rounded bg-[#F1F1F0]" />
+        <div className="h-3 w-5/6 rounded bg-[#F1F1F0]" />
       </div>
     </div>
   );
