@@ -1,60 +1,24 @@
+import Waveform from "./Waveform";
+
 function Header() {
   return (
-    <header className="text-center">
-      <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
-        <span
-          className="text-white"
-          style={{ textShadow: "0 0 30px rgba(59,130,246,0.15)" }}
-        >
-          Meeting{" "}
+    <header className="flex flex-col gap-6">
+      <div className="flex items-center gap-3">
+        <Waveform bars={6} />
+        <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#70737C]">
+          AI Meeting Notes
         </span>
-        <span
-          className="bg-gradient-to-b from-[#60A5FA] to-[#1D4ED8] bg-clip-text text-transparent"
-          style={{ textShadow: "0 0 30px rgba(59,130,246,0.35)" }}
-        >
-          Summarizer
-        </span>
+      </div>
+
+      <h1 className="max-w-xl text-4xl font-semibold leading-[1.1] tracking-tight text-[#111318] md:text-5xl">
+        Turn your call into a{" "}
+        <span className="text-[#5B5BF0]">clear record</span>.
       </h1>
 
-      <svg
-        className="mx-auto mt-5 h-6 w-72"
-        viewBox="0 0 300 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="4" cy="12" r="2" fill="#3B82F6" />
-        <path
-          d="M14 12c10-8 20 8 30 0s20-8 30 0 20 8 30 0"
-          stroke="#3B82F6"
-          strokeWidth="1"
-          opacity="0.8"
-        />
-        <path
-          d="M104 12c8-6 18 6 24 0"
-          stroke="#3B82F6"
-          strokeWidth="1"
-          opacity="0.5"
-        />
-        <g transform="translate(150,12)">
-          <path
-            d="M0 -6 L2 -2 L6 0 L2 2 L0 6 L-2 2 L-6 0 L-2 -2 Z"
-            fill="#60A5FA"
-          />
-        </g>
-        <path
-          d="M172 12c6-6 16 6 24 0"
-          stroke="#3B82F6"
-          strokeWidth="1"
-          opacity="0.5"
-        />
-        <path
-          d="M196 12c10-8 20 8 30 0s20-8 30 0 20 8 30 0"
-          stroke="#3B82F6"
-          strokeWidth="1"
-          opacity="0.8"
-        />
-        <circle cx="296" cy="12" r="2" fill="#3B82F6" />
-      </svg>
+      <p className="max-w-md text-[15px] leading-relaxed text-[#70737C]">
+        Upload a recording and get a transcript, summary, and action items in
+        minutes.
+      </p>
     </header>
   );
 }
